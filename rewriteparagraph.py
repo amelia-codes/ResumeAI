@@ -8,19 +8,21 @@ from typing_extensions import Annotated
 from langchain_community.tools.sql_database.tool import QuerySQLDatabaseTool
 from langgraph.graph import START, StateGraph
 
-
 if not os.environ.get("LANGSMITH_API_KEY"):
     os.environ["LANGSMITH_API_KEY"] = getpass.getpass()
     os.environ["LANGSMITH_TRACING"] = "true"
 
+#loading database
+db_skills = SQLDatabase.from_uri("skills.sql")
+db_abilities = SQLDatabase.from_uri("abilities.sql")
+db_knowledge = SQLDatabase.from_uri("knowledge.sql")
+db_work_activities = SQLDatabase.from_uri("activities.sql")
+db_occupation_title = SQLDatabase.from_uri("occupation.sql")
+db_words = SQLDatabase.from_uri("words.sql")
 
-
-
-db = SQLDatabase.from_uri("") #put our database in the quotes
 print(db.dialect)
 print(db.get_usable_table_names())
 #db.run("SELECT * FROM Artist LIMIT 10;")
-
 
 class State(TypedDict):
     question: str
@@ -28,16 +30,12 @@ class State(TypedDict):
     result: str
     answer: str
 
-
-
 if not os.environ.get("OPENAI_API_KEY"):
   os.environ["OPENAI_API_KEY"] = getpass.getpass("Enter API key for OpenAI: ")
 
 from langchain.chat_models import init_chat_model
 
 llm = init_chat_model("gpt-4o-mini", model_provider="openai")
-
-
 
 user_prompt = "Enter x from y section: {input}"
 
@@ -48,12 +46,10 @@ query_prompt_template = ChatPromptTemplate(
 for message in query_prompt_template.messages:
     message.pretty_print()
 
-
 class QueryOutput(TypedDict):
     """Generated SQL query."""
 
     query: Annotated[str, ..., "Syntactically valid SQL query."]
-
 
 def write_query(state: State):
     """Generate SQL query to fetch information."""
@@ -69,18 +65,13 @@ def write_query(state: State):
     result = structured_llm.invoke(prompt)
     return {"query": result["query"]}
 
-
 def execute_query(state: State):
     """Execute SQL query."""
     execute_query_tool = QuerySQLDatabaseTool(db=db)
     return {"result": execute_query_tool.invoke(state["query"])}
 
-
 def generate_answer(state: State):
-    """Answer question using retrieved information as context."""
     prompt = (
-        "Given the following user question, corresponding SQL query, "
-        "and SQL result, answer the user question.\n\n"
         f"Question: {state['question']}\n"
         f"SQL Query: {state['query']}\n"
         f"SQL Result: {state['result']}"
