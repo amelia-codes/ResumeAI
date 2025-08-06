@@ -19,11 +19,11 @@ db_knowledge = SQLDatabase.from_uri("knowledge.sql")
 db_work_activities = SQLDatabase.from_uri("activities.sql")
 db_occupation_title = SQLDatabase.from_uri("occupation.sql")
 db_words = SQLDatabase.from_uri("words.sql")
-
+#db = the combined database
 print(db.dialect)
 print(db.get_usable_table_names())
 #db.run("SELECT * FROM Artist LIMIT 10;")
-
+#we want all words from occupation
 class State(TypedDict):
     question: str
     query: str
@@ -58,7 +58,7 @@ def write_query(state: State):
             "dialect": db.dialect,
             "top_k": 10,
             "table_info": db.get_table_info(),
-            "input": state["question"],
+            "input": state["input"],
         }
     )
     structured_llm = llm.with_structured_output(QueryOutput)
@@ -69,9 +69,18 @@ def execute_query(state: State):
     """Execute SQL query."""
     execute_query_tool = QuerySQLDatabaseTool(db=db)
     return {"result": execute_query_tool.invoke(state["query"])}
-
+#add user occupation to prompt, query is list of allowed words
 def generate_answer(state: State):
+    """Answer question using retrieved information as context."""
     prompt = (
+        "Given the following user input, corresponding SQL query, "
+        "and SQL result, rewrite the user's input keeping approximately the" 
+        "same number of characters (plus or minus x - same number of lines)."
+        "Each word in the SQL query has an associated weight corresponding to" 
+        "the word's score and a high-scoring response has a high score. While rewriting," 
+        "you should use as many high weighted words in the query as"
+        "possible while maintaining good sentence flow."
+        "associated with the user's occupation \n\n"
         f"Question: {state['question']}\n"
         f"SQL Query: {state['query']}\n"
         f"SQL Result: {state['result']}"
