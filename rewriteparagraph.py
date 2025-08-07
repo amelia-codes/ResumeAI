@@ -16,7 +16,10 @@ from langgraph.graph import START, StateGraph
 db = SQLDatabase.from_uri("sqlite:///Database/ONET_DATABASE.db")
 print(db.dialect)
 print(db.get_usable_table_names())
-#db.run("SELECT * FROM Artist ORDER BY LIMIT 10;")
+print(db.run("SELECT element_id FROM work_activities ORDER BY scale_id LIMIT 10;"))
+print(db.run("SELECT element_id FROM skills ORDER BY scale_id LIMIT 10;"))
+print(db.run("SELECT element_id FROM knowledge ORDER BY scale_id LIMIT 10;"))
+print(db.run("SELECT element_id FROM abilities ORDER BY scale_id LIMIT 10;"))
 #we want our chat model to use words associated with the occupation of the top x highest weights
 class State(TypedDict):
     question: str
