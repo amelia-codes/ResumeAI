@@ -7,23 +7,17 @@ from langchain_core.prompts import ChatPromptTemplate
 from typing_extensions import Annotated
 from langchain_community.tools.sql_database.tool import QuerySQLDatabaseTool
 from langgraph.graph import START, StateGraph
-
-if not os.environ.get("LANGSMITH_API_KEY"):
-    os.environ["LANGSMITH_API_KEY"] = getpass.getpass()
-    os.environ["LANGSMITH_TRACING"] = "true"
+#for now ignore
+#if not os.environ.get("LANGSMITH_API_KEY"):
+#    os.environ["LANGSMITH_API_KEY"] = getpass.getpass()
+#    os.environ["LANGSMITH_TRACING"] = "true"
 
 #loading database
-db_skills = SQLDatabase.from_uri("skills.sql")
-db_abilities = SQLDatabase.from_uri("abilities.sql")
-db_knowledge = SQLDatabase.from_uri("knowledge.sql")
-db_work_activities = SQLDatabase.from_uri("activities.sql")
-db_occupation_title = SQLDatabase.from_uri("occupation.sql")
-db_words = SQLDatabase.from_uri("words.sql")
-#db = the combined database
+db = SQLDatabase.from_uri("sqlite:///Database/ONET_DATABASE.db")
 print(db.dialect)
 print(db.get_usable_table_names())
-#db.run("SELECT * FROM Artist LIMIT 10;")
-#we want all words from occupation
+#db.run("SELECT * FROM Artist ORDER BY LIMIT 10;")
+#we want our chat model to use words associated with the occupation of the top x highest weights
 class State(TypedDict):
     question: str
     query: str
