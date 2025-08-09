@@ -82,3 +82,5 @@ for occupation in occupation_list:
 
 plt.hist(dist)
 plt.show()
+
+# TODO: Check the distribution of skills/knowledge/abilities/work activities similarity.
