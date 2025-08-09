@@ -8,6 +8,8 @@ from typing_extensions import Annotated
 from langchain_community.tools.sql_database.tool import QuerySQLDatabaseTool
 from langgraph.graph import START, StateGraph
 import sqlite3
+from bs4 import BeautifulSoup
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 #for now ignore
 #if not os.environ.get("LANGSMITH_API_KEY"):
 #    os.environ["LANGSMITH_API_KEY"] = getpass.getpass()
@@ -19,8 +21,23 @@ import sqlite3
 keywords = []
 con = sqlite3.connect("Database/ONET_DATABASE.db")
 cur = con.cursor()
-job_description = input("Enter Job Description Here Exactly as Stated by Company: ") #compare to onet jobs. then run wrapper on our words + words scraped from website with artificial weights based on similarity to onet words
-#want list of occupations with high overlap
+company = input("Do you have a specific company/job in mind. Please enter Y or N: ")
+paragraph = input("Would you like to submit a paragraph or URL containing Job Description? Please enter 'paragraph' or 'url'")
+if paragraph == "url":
+    job_description = input("Enter Job Description Url: ") #compare to onet jobs. then run wrapper on our words + words scraped from website with artificial weights based on similarity to onet words
+    description_soup = BeautifulSoup(open("index.html"))
+    description_soup.get_text()
+    text_splitter = RecursiveCharacterTextSplitter(chunk_size=100, chunk_overlap=0)
+    companyabout = input("Enter Company Website About Page Here: ")
+    about_soup = BeautifulSoup(open("index.html"))
+    about_soup = about_soup.get_text()
+    description_texts = text_splitter.split_text(description_soup)
+    about_texts = text_splitter.split_text(about_soup)
+#could also split based on html
+
+#take out html keys
+#split text into chunks
+#have ML model check for significance
 occupation = "Financial Managers"
 for table in ('skills','knowledge','abilities','work_activities'):
     query = f"""
