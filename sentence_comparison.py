@@ -1,4 +1,4 @@
-#from sentence_transformers import SentenceTransformer, util
+from sentence_transformers import SentenceTransformer, util
 import sqlite3
 
 job_name = "math"
@@ -6,26 +6,53 @@ job_name = "math"
 connection = sqlite3.connect("Database/ONET_DATABASE.db")
 cursor = connection.cursor()
 
-cursor.execute(f"SELECT onetsoc_code, title FROM occupation_data WHERE title LIKE '%{job_name}%';")
-print(cursor.fetchall())
+query = """
+    SELECT 
+        oc.title
+    FROM occupation_data oc
+    """
 
-cursor.execute(f"SELECT onetsoc_code, alternate_title, short_title FROM alternate_titles WHERE alternate_title LIKE '%{job_name}%' OR short_title LIKE '%{job_name}%';")
-print(cursor.fetchall())
+cursor.execute(query)
+occupation_list = cursor.fetchall()
 
-cursor.execute(f"SELECT onetsoc_code, reported_job_title FROM sample_of_reported_titles WHERE reported_job_title LIKE '%{job_name}%';")
-print(cursor.fetchall())
 
-quit()
+total_list = []
+
+from pprint import pprint
+
+for table in ('skills', 'knowledge', 'abilities', 'work_activities'):
+    query = """
+    SELECT 
+        oc.title,
+        sk.scale_id,
+        (sk.data_value - sr.minimum) / (sr.maximum - sr.minimum),
+        cmr.element_name
+    FROM occupation_data oc
+    RIGHT JOIN skills sk
+        ON oc.onetsoc_code = sk.onetsoc_code
+    LEFT JOIN scales_reference sr
+        ON sk.scale_id = sr.scale_id
+    LEFT JOIN content_model_reference cmr
+        ON sk.element_id = cmr.element_id
+    WHERE sk.scale_id = 'IM'
+    """
+
+    cursor.execute(query)
+    total_list.extend(cursor.fetchall())
 
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
 sentence = "Built backend services for a logistics company using Python and PostgreSQL."
-goal_words = ["developer", "python", "SQL"]
 
 # Convert to embeddings
-emb1 = model.encode(sentence, convert_to_tensor=True)
-emb2 = model.encode(goal_words, convert_to_tensor=True)
+emb1 = model.encode(sentence)
 
-# Compute similarity
-score = model.similarity(emb1, emb2)
-print(score)
+for occupation in occupation_list:
+    score = 0
+    for ele in total_list:
+        if ele[0] == occupation[0]:
+            emb2 = model.encode(ele[3])
+
+            # Compute similarity
+            score += ele[2] * model.similarity(emb1, emb2)
+    print(occupation, score)
