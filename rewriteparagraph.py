@@ -7,19 +7,39 @@ from langchain_core.prompts import ChatPromptTemplate
 from typing_extensions import Annotated
 from langchain_community.tools.sql_database.tool import QuerySQLDatabaseTool
 from langgraph.graph import START, StateGraph
+import sqlite3
 #for now ignore
 #if not os.environ.get("LANGSMITH_API_KEY"):
 #    os.environ["LANGSMITH_API_KEY"] = getpass.getpass()
 #    os.environ["LANGSMITH_TRACING"] = "true"
 
 #loading database
-db = SQLDatabase.from_uri("sqlite:///Database/ONET_DATABASE.db")
-print(db.dialect)
-print(db.get_usable_table_names())
-print(db.run("SELECT element_id FROM work_activities ORDER BY scale_id LIMIT 10;"))
-print(db.run("SELECT element_id FROM skills ORDER BY scale_id LIMIT 10;"))
-print(db.run("SELECT element_id FROM knowledge ORDER BY scale_id LIMIT 10;"))
-print(db.run("SELECT element_id FROM abilities ORDER BY scale_id LIMIT 10;"))
+#need to filter by occupation first
+#case sensitive?
+keywords = []
+con = sqlite3.connect("Database/ONET_DATABASE.db")
+cur = con.cursor()
+job_description = input("Enter Job Description Here Exactly as Stated by Company: ") #compare to onet jobs. then run wrapper on our words + words scraped from website with artificial weights based on similarity to onet words
+#want list of occupations with high overlap
+occupation = "Financial Managers"
+for table in ('skills','knowledge','abilities','work_activities'):
+    query = f"""
+    SELECT 
+        cmr.element_name
+    FROM {table} tb
+    LEFT JOIN content_model_reference cmr
+        ON tb.element_id = cmr.element_id
+    LEFT JOIN occupation_data oc
+        ON tb.onetsoc_code = oc.onetsoc_code
+    WHERE tb.scale_id = 'IM' AND tb.data_value >= 3 AND oc.title = '{occupation}'
+    """
+
+    result = cur.execute(query)
+    result = result.fetchall()
+    keywords.append([i[0] for i in result])
+keywords = [item for sublist in keywords for item in sublist]
+print(keywords)
+
 #we want our chat model to use words associated with the occupation of the top x highest weights
 class State(TypedDict):
     question: str
