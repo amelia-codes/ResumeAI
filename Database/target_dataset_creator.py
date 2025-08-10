@@ -18,7 +18,7 @@ full_list = []
 nlp = spacy.load("en_core_web_trf")
 for section_text in occupation_list:
     tokens = nlp(section_text[0])
-    full_list.extend(list(tokens.noun_chunks))
+    full_list.extend([" ".join(noun_chunk) for noun_chunk in tokens.noun_chunks])
 
 print("check 2")
 
