@@ -21,7 +21,7 @@ for table in ('skills', 'knowledge', 'abilities', 'work_activities'):
     query = f"""
     SELECT 
         oc.title,
-        
+        sk.scale_id,
         (sk.data_value - sr.minimum) / (sr.maximum - sr.minimum),
         cmr.description
     FROM occupation_data oc
@@ -32,19 +32,21 @@ for table in ('skills', 'knowledge', 'abilities', 'work_activities'):
     LEFT JOIN content_model_reference cmr
         ON sk.element_id = cmr.element_id
     WHERE sk.scale_id = 'IM'
+    AND sk.data_value > 2
     """
     cursor.execute(query)
     total_list.extend(cursor.fetchall())
 
-all_data_points = pd.DataFrame(total_list, columns=["ONET_CODE", "IMPORTANCE", "DESCRIPTION"])
+all_data_points = pd.DataFrame(total_list, columns=["ONET_CODE", "SCALE_ID", "IMPORTANCE", "DESCRIPTION"])
 
 # Summary of how skills are matched to occupations, concerning amount of overlap...
 summary = all_data_points.groupby("DESCRIPTION")["IMPORTANCE"].agg(["mean", "var", "count"])
 print(len(summary[summary["count"] != 879])) #all descriptions matched to 879 of the occupations....
-# TODO: Do all jobs have the same skills/knowledge/abilities/work activities? If so, that needs to be handled. We need sparsity.
+print(len(summary))
 
+print(len(all_data_points["ONET_CODE"].unique()))
 
-quit()
+#quit()
 ### QUIT MESSAGE HERE
 
 
@@ -59,10 +61,10 @@ model = SentenceTransformer('all-MiniLM-L6-v2')
 sentence = "Built backend services for a logistics company using Python and PostgreSQL."
 emb1 = model.encode(sentence)
 
-## HERE WE LOOK AT DISTRIBUTION OF SIMILARITY OF JOB NAMES
-embeddings = model.encode([ele[0] for ele in total_list])
-plt.hist(model.similarity(emb1, embeddings))
-plt.show()
+# ## HERE WE LOOK AT DISTRIBUTION OF SIMILARITY OF JOB NAMES
+# embeddings = model.encode([ele[0] for ele in total_list])
+# plt.hist(model.similarity(emb1, embeddings))
+# plt.show()
 
 ## HERE WE LOOK DISTRIBUTION OF SCORES
 dist = []
