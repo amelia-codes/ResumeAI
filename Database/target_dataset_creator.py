@@ -2,7 +2,7 @@ import sqlite3
 import pandas as pd
 import spacy
 
-connection = sqlite3.connect("Database/ONET_DATABASE.db")
+connection = sqlite3.connect("ONET_DATABASE.db")
 cursor = connection.cursor()
 query = """
     SELECT 
@@ -22,4 +22,4 @@ for section_text in occupation_list:
 
 print("check 2")
 
-pd.DataFrame(full_list).to_excel("Database/target_dataset.xlsx")
+pd.DataFrame(full_list).to_excel("target_dataset.xlsx")
