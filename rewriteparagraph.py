@@ -11,7 +11,6 @@ import sqlite3
 from bs4 import BeautifulSoup
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 import spacy
-
 #for now ignore
 #if not os.environ.get("LANGSMITH_API_KEY"):
 #    os.environ["LANGSMITH_API_KEY"] = getpass.getpass()
@@ -49,9 +48,15 @@ Working Experience with ASTs and Fixed Equipment.
 
 """
 
-
+#html split into sections
 nlp = spacy.load("en_core_web_trf")
 tokens = nlp(test_phrase_national_lab)
+for section_text in sections:
+    tokens = nlp(section_text)
+    weight = 0 #change later not sure how to classify this
+    phrases = list(tokens.noun_chunks)
+    #append keywords list with new phrases (note currently keywords is a list of phrases but it should change to be a tuple including weights)
+
 phrases = list(tokens.noun_chunks)
 print(phrases)
 
