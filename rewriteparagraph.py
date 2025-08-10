@@ -10,6 +10,8 @@ from langgraph.graph import START, StateGraph
 import sqlite3
 from bs4 import BeautifulSoup
 from langchain_text_splitters import RecursiveCharacterTextSplitter
+import spacy
+
 #for now ignore
 #if not os.environ.get("LANGSMITH_API_KEY"):
 #    os.environ["LANGSMITH_API_KEY"] = getpass.getpass()
@@ -21,23 +23,56 @@ from langchain_text_splitters import RecursiveCharacterTextSplitter
 keywords = []
 con = sqlite3.connect("Database/ONET_DATABASE.db")
 cur = con.cursor()
-company = input("Do you have a specific company/job in mind. Please enter Y or N: ")
-paragraph = input("Would you like to submit a paragraph or URL containing Job Description? Please enter 'paragraph' or 'url'")
-if paragraph == "url":
-    job_description = input("Enter Job Description Url: ") #compare to onet jobs. then run wrapper on our words + words scraped from website with artificial weights based on similarity to onet words
-    description_soup = BeautifulSoup(open("index.html"))
-    description_soup.get_text()
-    text_splitter = RecursiveCharacterTextSplitter(chunk_size=100, chunk_overlap=0)
-    companyabout = input("Enter Company Website About Page Here: ")
-    about_soup = BeautifulSoup(open("index.html"))
-    about_soup = about_soup.get_text()
-    description_texts = text_splitter.split_text(description_soup)
-    about_texts = text_splitter.split_text(about_soup)
-#could also split based on html
+#company = input("Do you have a specific company/job in mind. Please enter Y or N: ")
+#paragraph = input("Would you like to submit a paragraph or URL containing Job Description? Please enter 'paragraph' or 'url'")
+#if paragraph == "url":
+#    job_description = input("Enter Job Description Url: ") #compare to onet jobs. then run wrapper on our words + words scraped from website with artificial weights based on similarity to onet words
+#    description_soup = BeautifulSoup(open(job_description))
+#    description_soup.get_text()
+#    text_splitter = RecursiveCharacterTextSplitter(chunk_size=100, chunk_overlap=0)
+#    companyabout = input("Enter Company Website About Page Here: ")
+#    about_soup = BeautifulSoup(open(companyabout))
+#    about_soup = about_soup.get_text()
+#    description_texts = text_splitter.split_text(description_soup)
+#    about_texts = text_splitter.split_text(about_soup)
+
+#setting up NER model with accurate (but possibly slightly slower) pipeline
+test_phrase_national_lab =  """
+
+Minimum Job Requirements:
+
+Ability to work within a team-based environment and experience collaborating with team members to support project goals.
+Strong communication skills to include providing appropriate inspection follow up and recommendations.
+Proficiency with personal computers and common software platforms, such as Microsoft Office, and records management experience.
+Demonstrated ability to work independently on assignments.
+Working Experience with ASTs and Fixed Equipment.
+
+"""
+
+
+nlp = spacy.load("en_core_web_trf")
+tokens = nlp(test_phrase_national_lab)
+phrases = list(tokens.noun_chunks)
+print(phrases)
+
 
 #take out html keys
 #split text into chunks
 #have ML model check for significance
+
+
+#input both the website and resume examples
+template = ("Given the input which contains chuncks of text parsed from an" 
+           "html file, identify which chunks contain skills. These skills may" 
+           "be under a header entitled 'Job Responsibilities','Qualifications'," 
+           "etc. Specifically these skills should be words or phrases describing" 
+           "technical knowledge, required education level,"
+           "experiences/amount of experience in years, and or leadership/qualities"
+           "of a worker at the company. Output the results" 
+           "in a list titled 'job_specific_keywords'")
+
+
+
 occupation = "Financial Managers"
 for table in ('skills','knowledge','abilities','work_activities'):
     query = f"""
