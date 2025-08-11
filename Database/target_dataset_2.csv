@@ -1,0 +1,612 @@
+Phrase,target
+The ability,False
+Knowledge,False
+information,True
+others,False
+equipment,True
+principles,True
+This,False
+people,True
+methods,True
+materials,True
+ideas,False
+that,False
+time,True
+objects,False
+procedures,True
+machines,True
+processes,True
+problems,False
+performance,True
+legs,False
+systems,True
+actions,False
+services,True
+data,True
+rules,False
+differences,True
+the environment,True
+events,False
+you,False
+they,False
+things,False
+techniques,True
+it,False
+writing,True
+relation,False
+products,True
+arms,False
+-,False
+benefits,True
+It,False
+changes,True
+something,False
+laws,True
+guidance,True
+devices,True
+customers,True
+software,True
+resources,True
+a problem,False
+your arm,False
+tools,True
+which,False
+words,False
+what,False
+your hand,False
+maintenance,True
+mail,False
+their minds,False
+vehicles,True
+the work,False
+the whole body,False
+treatment,True
+interactions,False
+uses,True
+indicators,True
+them,False
+sounds,False
+hands,False
+money,True
+goods,True
+general rules,False
+functions,True
+foot,False
+drawings,True
+distribution,True
+direction,True
+your arms,False
+details,False
+your body,False
+grammar,True
+motion,False
+sound,False
+production,True
+specifications,True
+spelling,True
+similarities,True
+structures,True
+sense,False
+subordinates,True
+costs,True
+repair,True
+technology,True
+telephone,True
+quality,True
+programs,True
+the basis,False
+the fingers,False
+muscle force,True
+the hand,False
+the meaning,False
+the movement,False
+the organization,False
+pictures,False
+person,False
+the presence,False
+the public,False
+the relative costs,True
+the speed,True
+operations,True
+the structure,False
+numbers,False
+cultures,False
+yourself,False
+an object,False
+a machine,True
+activities,False
+conclusions,True
+applications,True
+content,False
+composition,False
+computers,True
+court procedures,True
+all relevant sources,False
+strategies,True
+structure,False
+algebra,True
+stores,True
+substances,True
+supervisors,True
+switching,False
+strategic planning,True
+statistics,True
+storage / handling techniques,True
+stenography,True
+system performance,True
+state,False
+standards,True
+sprinting,False
+spoken words,False
+alternative solutions,False
+speech,False
+alternative ways,False
+specific problems,True
+specific goals,False
+sources,False
+symptoms,True
+tactics,False
+aircraft,True
+the arms,False
+the democratic political process,True
+the correct response,True
+the controls,True
+the construction,True
+the chemical processes,True
+the chemical composition,True
+the cause,False
+the body,False
+the best solution,True
+the best people,True
+ability,False
+the audience,False
+the assessment,True
+the appropriate use,False
+an organization,True
+the analysis,True
+the activities,False
+the actions,False
+the English language,True
+tests,True
+administrative and office procedures,True
+telecommunications systems,True
+agency rules,True
+"air, rail, sea, road",True
+"technical , systems- , or process - related topics",True
+team members,False
+teaching,True
+tasks,False
+"sound , light , picture",True
+solutions,True
+an unstable position,True
+reasons,False
+resource allocation,True
+resistance,False
+reporting,True
+arithmetic,True
+religions,False
+relevant information,True
+relevant equipment,False
+relationships,True
+arm,False
+related information,True
+rehabilitation,True
+regulations,True
+records,True
+reasoning,True
+the developmental needs,True
+raw materials,True
+rail,False
+questions,False
+quantities,True
+quality standards,True
+quality control,True
+artistic contributions,True
+psychological research methods,True
+property,True
+properties,True
+pronunciation,False
+banking,True
+programming,True
+approaches,True
+respect,False
+response,False
+restaurants,True
+animal,True
+societal trends,True
+skills,False
+sizes,True
+situation,False
+another person,False
+short bursts,False
+shades,False
+several objects,False
+sets,False
+set,False
+answers,False
+separate parts,True
+sentences,False
+anticipation,True
+selection,False
+seemingly unrelated events,True
+sea,False
+sculpture,False
+scientific rules,True
+scene,False
+sales techniques,True
+sales control systems,True
+routine maintenance,True
+roads,False
+road,False
+results,True
+the design,True
+the distance,False
+the differences,False
+weaknesses,False
+watercraft,True
+visual arts,False
+very small objects,False
+a given topic,False
+various purposes,False
+various goods,True
+values,True
+a glare,False
+user needs,True
+unusual or clever ideas,True
+two or more movements,True
+two or more limbs,False
+two or more different signals,True
+two or more activities,True
+two legs,False
+treatment alternatives,True
+a group,False
+transmission,False
+transformations,False
+transcription,True
+training effects,True
+training / instructional methods,True
+training,True
+touch,False
+torso,False
+a job,False
+a known pattern,True
+ways,False
+a foreign ( non - English ) language,True
+the direction,False
+what kind,False
+your work,False
+your whole body,False
+your movements,False
+your location,False
+your job,False
+The things,False
+your body balance,True
+This ability,False
+This information,True
+a certain order,False
+your abdominal and lower back muscles,True
+a design,True
+written sentences,False
+written or electronic / magnetic form,True
+written form,False
+"written , oral , and visual media",True
+a distance,True
+wrists,False
+works,False
+workplace terminology,True
+workers,False
+work - related documents,False
+a few feet,True
+word processing,True
+word,False
+wiring,True
+a figure,True
+thinking,False
+a moving object,True
+these expenditures,True
+a number,False
+the protection,False
+the problem,False
+a sound,False
+the practical application,True
+the points,False
+a specific rule,False
+the observer,False
+the number,False
+the needs,False
+the needed tools,False
+a system,True
+the measurement,True
+a task,False
+the kind,False
+the job,False
+the information,False
+the implications,False
+a topic,False
+the goals,True
+a vehicle,True
+the financial markets,True
+the features,False
+the eyes,False
+a work activity,False
+the effective manufacture,True
+the educational needs,False
+production techniques,True
+a single source,True
+a signal,False
+the right mathematical methods,True
+a presented object,True
+their tissues,True
+their physical characteristics,False
+a period,False
+their knowledge,False
+their interrelationships,False
+their interactions,False
+their impact,False
+their history,True
+their designs,True
+their causes,False
+their applications,True
+a piece,False
+the value,False
+the same time,False
+the underlying principles,True
+the tools,False
+the time,False
+the theory,True
+the system,True
+a relationship,False
+the strengths,False
+the strategies,True
+the spending,True
+a remembered object,True
+the speech,False
+the situation,False
+behavior,False
+production methods,True
+production processes,True
+human behavior,True
+historical events,True
+highways,True
+hardware,True
+complex problems,True
+hand,False
+guests,True
+groups,False
+group behavior,True
+grievances,True
+computer hardware,True
+government regulations,True
+government,True
+computer programs,True
+geometry,True
+computer systems,True
+general physical activities,False
+gauges,True
+full attention,False
+formulas,True
+forms,True
+formal educational or training programs,True
+forklifts,True
+food products,True
+"fluid , material , and atmospheric dynamics",True
+finger,False
+financial data,True
+files,True
+houses,True
+human culture,False
+facts,False
+human injuries,True
+leadership technique,True
+co,False
+"land , sea , and air masses",True
+labor relations,True
+jumping,False
+its parts,False
+color,False
+interrelationships,True
+interests,False
+interdependencies,True
+colors,False
+instruction,True
+institutions,False
+inspections,True
+information files,True
+communication,True
+influences,False
+individuals,False
+individual judgment,True
+individual differences,False
+compensation,True
+inappropriate times,False
+improvements,True
+importance,False
+complaints,True
+human resources modeling,True
+human migrations,True
+"fast , simple , repeated movements",True
+facilities,True
+coworkers,True
+disposal methods,True
+consumption,False
+direct physical activity,True
+different ways,False
+different sets,False
+different philosophical systems,False
+dials,True
+diagnosis,True
+control,False
+cooperation,True
+detailed instructions,True
+design techniques,True
+deformities,True
+defects,True
+decision - making,True
+day,False
+date,False
+coordination,True
+danger signs,True
+dance,False
+corrective action,True
+customer satisfaction,True
+customer needs assessment,True
+customer and personal services,True
+curriculum and training design,True
+correctness,False
+creativity,True
+creative ways,True
+diseases,True
+disputes,True
+expert advice,True
+dissemination techniques,True
+executive orders,True
+example,False
+exact positions,True
+conditions,True
+evaluation,True
+ethnicity,False
+ethics,False
+errors,False
+conflicts,True
+engineering science,True
+employees,False
+emotional support,True
+electronic equipment,True
+electrical or electronic ( not mechanical ) principles,True
+either control mechanisms,True
+effects,False
+economic and accounting principles,True
+"e.g. , patterns",False
+e-mail,True
+e,False
+dynamics,False
+drug properties,True
+considerable use,True
+drama,False
+documentation,True
+constructive and cooperative working relationships,True
+distances,True
+learning,False
+legal codes,True
+close range,True
+performance standards,True
+buildings,True
+patterns,False
+pattern,False
+patients,True
+passenger vehicles,True
+parts,False
+part,False
+paragraphs,False
+paperwork,True
+outcomes,True
+others ' reactions,True
+others ' actions,False
+business and management principles,True
+other techniques,False
+other structures,False
+other sources,False
+other problems,False
+other personal care,True
+other people,False
+other objects,False
+other individuals,True
+other indicators,True
+other groups,False
+other external sources,True
+other distracting sounds,True
+calculus,True
+other body part,False
+broadcasting,False
+brightness,False
+letters,False
+personal assistance,True
+behavioral and affective disorders,True
+product requirements,True
+product demonstration,True
+processors,True
+blueprints,True
+both current and future problem - solving,True
+both plant,False
+breath,False
+preventive health - care measures,True
+prediction,True
+precision technical plans,True
+precisely coordinated movements,True
+precedents,True
+practices,False
+potential actions,True
+policies,True
+plant and animal organisms,True
+"plant , animal , and human life",True
+plans,False
+pitch,True
+pieces,False
+bright lighting,False
+physical principles,True
+physical and mental dysfunctions,True
+personnel recruitment,True
+personnel information systems,True
+personality,False
+origins,False
+organizations,True
+options,True
+career counseling,True
+models,True
+circuit boards,True
+merchandise / goods,True
+members,False
+medical attention,True
+media production,True
+mechanized equipment,True
+"mechanical , electrical , atomic and sub - atomic structures",True
+mechanical ( not electronic ) principles,True
+measures,True
+meaningful patterns,True
+maximum muscle force,True
+mathematics,True
+mathematical operations,True
+circumstances,False
+marketing strategy,True
+management,True
+civilizations,False
+classes,False
+clients,True
+low - light conditions,True
+loudness,True
+long periods,False
+long - range objectives,True
+logic,True
+locations,False
+"lights , sounds , pictures",True
+chips,True
+chemicals,True
+motivation,True
+cells,True
+operation,False
+operating errors,True
+oneself,False
+one position,False
+one or both hands,False
+one leg,False
+one arm,False
+one 's side,False
+one 's own time,True
+causes,False
+object,True
+"numbers , letters , words , pictures",True
+new things,False
+movement,False
+new knowledge,True
+new information,True
+new applications,True
+negotiation,True
+needs,True
+national security operations,True
+mutual trust,True
+music,False
+muscular endurance,True
+certain work,False
+muscle fatigue,True
+moving parts,False
+other distracting material,False
