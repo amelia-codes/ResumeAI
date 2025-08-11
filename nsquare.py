@@ -3,7 +3,12 @@ from torch.utils.data import Dataset
 from torchtext import datasets
 from torchtext.transforms import ToTensor
 import matplotlib.pyplot as plt
-
+import pandas as pd
+#sentence transform
+#load our excel dataset
+dataset = pd.read_excel("Database/target_dataset.xlsx", index_col=0)
+label = dataset.columns[0]
+datacolumn = dataset.columns[1]
 #add in our dataset split into training and test data
 training_data = datasets.FashionMNIST(
     root="data", #path
