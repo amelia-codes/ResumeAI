@@ -1,7 +1,7 @@
 import torch
 from torch.utils.data import Dataset
-from torchvision import datasets
-from torchvision.transforms import ToTensor
+from torchtext import datasets
+from torchtext.transforms import ToTensor
 import matplotlib.pyplot as plt
 
 #add in our dataset split into training and test data
