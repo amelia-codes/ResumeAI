@@ -8,3 +8,9 @@
 - The final results included:
     - Accuracy: 63.4%
     - Avg loss: 0.688499
+
+### Embedding-Based Neural Network  
+- Used sentence_transform to create vector embeddings to feed into the nn.
+- The final results included:
+    - Accuracy: 63.4%
+    - Avg loss: 0.689506
