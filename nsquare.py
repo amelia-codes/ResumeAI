@@ -6,13 +6,14 @@ import matplotlib.pyplot as plt
 import pandas as pd
 #sentence transform
 from sentence_transformers import SentenceTransformer
+import numpy as np
 
 # HYPERPARAMETERS
-learning_rate = 0.001
+learning_rate = 0.01
 # linear layer size
 size1 = 384  # THIS IS FIXED
-size2 = 500
-test_train_ratio = 0.8
+#size2 = 500
+test_train_ratio = 0.9
 
 
 
@@ -45,7 +46,7 @@ class KeywordDataset(Dataset):
         if torch.is_tensor(idx):
             idx = idx.tolist()
         phrase = self.keyword_df.loc[idx, "Phrase"]
-        target = self.keyword_df.loc[idx, "target"]
+        target = int(self.keyword_df.loc[idx, "target"])
 
         if self.transform:
             phrase = self.transform(phrase)
@@ -70,8 +71,8 @@ test_data = KeywordDataset("Database/target_dataset_2.csv", transform=transform,
 #change later
 batch_size = 64
 
-train_dataloader = DataLoader(training_data, batch_size=batch_size)
-test_dataloader = DataLoader(test_data, batch_size=batch_size)
+train_dataloader = DataLoader(training_data, batch_size=batch_size,shuffle=True)
+test_dataloader = DataLoader(test_data, batch_size=batch_size,shuffle=True)
 
 #accelerator
 device = torch.accelerator.current_accelerator().type if torch.accelerator.is_available() else "cpu"
@@ -84,7 +85,7 @@ class NeuralNetwork(torch.nn.Module):
         super().__init__()
         self.linear_relu_stack = torch.nn.Sequential(
             torch.nn.Linear(size1, size2),
-            torch.nn.ReLU(),
+            torch.nn.ReLU(), 
             torch.nn.Linear(size2, size2),
             torch.nn.ReLU(),
             torch.nn.Linear(size2, 1)
@@ -96,12 +97,12 @@ class NeuralNetwork(torch.nn.Module):
         return logits
 
 device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
-model = NeuralNetwork()
-model.to(device)
+#model = NeuralNetwork()
+#model.to(device)
 
 #loss function
 loss_fn = torch.nn.BCEWithLogitsLoss()
-optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate)
+#optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate)
 #computing the gradient
 
 
@@ -146,13 +147,47 @@ def test_loop(dataloader, model, loss_fn):
     test_loss /= num_batches
     correct /= size
     print(f"Test Error: \n Accuracy: {(100*correct):>0.1f}%, Avg loss: {test_loss:>8f} \n")
+    return correct
 
 
 
 epochs = 10
-for t in range(epochs):
-    print(f"Epoch {t+1}\n-------------------------------")
-    train_loop(train_dataloader, model, loss_fn, optimizer)
-print("Complete.")
+#for t in range(epochs):
+#    print(f"Epoch {t+1}\n-------------------------------")
+#    train_loop(train_dataloader, model, loss_fn, optimizer)
+#print("Complete.")
+xpoints=[]
+ypoints=[]
 
-test_loop(test_dataloader, model, loss_fn)
+"""
+for i in np.arange(.001,.01,.001):
+    learning_rate = i
+    optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate)
+    for t in range(epochs):
+        print(f"Epoch {t+1}\n-------------------------------")
+        train_loop(train_dataloader, model, loss_fn, optimizer)
+    print("Complete.")
+    correct = test_loop(test_dataloader, model, loss_fn)
+    xpoints.append(i)
+    ypoints.append(correct*100)
+"""
+
+for i in range(100,1000,100):
+    size2=i
+    model = NeuralNetwork()
+    model.to(device)
+    optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate)
+    for t in range(epochs):
+        print(f"Epoch {t+1}\n-----------------------------")
+        train_loop(train_dataloader,model,loss_fn,optimizer)
+    correct = test_loop(test_dataloader,model,loss_fn)
+    xpoints.append(i)
+    ypoints.append(correct*100)
+
+
+plt.plot(xpoints,ypoints)
+plt.xlabel("size2")
+plt.ylabel("accuracy")
+plt.title("size2 vs accuracy")
+plt.show()
+
