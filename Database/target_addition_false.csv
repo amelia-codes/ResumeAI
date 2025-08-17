@@ -1,0 +1,360 @@
+word,false/true
+Administered,
+Analyzed,TRUE
+Assigned,TRUE
+Chaired,TRUE
+Consolidated,TRUE
+Contracted,TRUE
+Coordinated,TRUE
+Delegated,TRUE
+Developed,TRUE
+Directed,TRUE
+Evaluated,TRUE
+Executed,TRUE
+Organized,TRUE
+Oversaw,TRUE
+Planned,TRUE
+Prioritized,TRUE
+Produced,TRUE
+Recommended,TRUE
+Reorganized,TRUE
+Reviewed,TRUE
+Scheduled,TRUE
+Supervised,TRUE
+Administered,TRUE
+Allocated,TRUE
+Analyzed,TRUE
+Appraised,TRUE
+Audited,TRUE
+Balanced,TRUE
+Budgeted,TRUE
+Calculated,TRUE
+Computed,TRUE
+Developed,TRUE
+Managed,TRUE
+Planned,TRUE
+Projected,TRUE
+Researched,TRUE
+Addressed,TRUE
+Arbitrated,TRUE
+Arranged,TRUE
+Authored,TRUE
+Co-authored,TRUE
+Collaborated,TRUE
+Corresponded,TRUE
+Developed,TRUE
+Directed,TRUE
+Drafted,TRUE
+Enlisted,TRUE
+Formulated,TRUE
+Influenced,TRUE
+Interpreted,TRUE
+Lectured,TRUE
+Mediated,TRUE
+Moderated,TRUE
+Negotiated,TRUE
+Persuaded,TRUE
+Promoted,TRUE
+Proposed,TRUE
+Publicized,TRUE
+Reconciled,TRUE
+Recruited,TRUE
+Spoke,TRUE
+Translated,TRUE
+Wrote,TRUE
+Clarified,TRUE
+Collected,TRUE
+Critiqued,TRUE
+Diagnosed,TRUE
+Evaluated,TRUE
+Examined,TRUE
+Extracted,TRUE
+Identified,TRUE
+Inspected,TRUE
+Inspired,TRUE
+Interpreted,TRUE
+Interviewed,TRUE
+Investigated,TRUE
+Organized,TRUE
+Reviewed,TRUE
+Summarized,TRUE
+Surveyed,TRUE
+Systematized,TRUE
+Assembled,TRUE
+Built,TRUE
+Calculated,TRUE
+Computed,TRUE
+Designed,TRUE
+Devised,TRUE
+Engineered,TRUE
+Fabricated,TRUE
+Maintained,TRUE
+Operated,TRUE
+Pinpointed,TRUE
+Programmed,TRUE
+Remodeled,TRUE
+Repaired,TRUE
+Solved,TRUE
+Adapted,TRUE
+Advised,TRUE
+Clarified,TRUE
+Coached,TRUE
+Communicated,TRUE
+Conducted,TRUE
+Coordinated,TRUE
+Developed,TRUE
+Enabled,TRUE
+Encouraged,TRUE
+Evaluated,TRUE
+Explained,TRUE
+Facilitated,TRUE
+Guided,TRUE
+Informed,TRUE
+Instructed,TRUE
+Lectured,TRUE
+Persuaded,TRUE
+Set goals,TRUE
+Stimulated,TRUE
+Taught,TRUE
+Trained,TRUE
+Acted,TRUE
+Conceptualized,TRUE
+Created,TRUE
+Customized,TRUE
+Designed,TRUE
+Developed,TRUE
+Directed,TRUE
+Established,TRUE
+Fashioned,TRUE
+Illustrated,TRUE
+Instituted,TRUE
+Integrated,TRUE
+Performed,TRUE
+Planned,TRUE
+Proved,TRUE
+Revised,TRUE
+Revitalized,TRUE
+Set up,TRUE
+Shaped,TRUE
+Streamlined,TRUE
+Structured,TRUE
+Tabulated,TRUE
+Validated,TRUE
+Assessed,TRUE
+Assisted,TRUE
+Clarified,TRUE
+Coached,TRUE
+Counseled,TRUE
+Demonstrated,TRUE
+Diagnosed,TRUE
+Educated,TRUE
+Facilitated,TRUE
+Familiarized,TRUE
+Guided,TRUE
+Inspired,TRUE
+Motivated,TRUE
+Participated,TRUE
+Provided,TRUE
+Referred,TRUE
+Rehabilitated,TRUE
+Reinforced,TRUE
+Represented,TRUE
+Supported,TRUE
+Taught,TRUE
+Trained,TRUE
+Verified,TRUE
+Approved,TRUE
+Arranged,TRUE
+Catalogued,TRUE
+Classified,TRUE
+Collected,TRUE
+Compiled,TRUE
+Dispatched,TRUE
+Executed,TRUE
+Filed,TRUE
+Generated,TRUE
+Implemented,TRUE
+Inspected,TRUE
+Monitored,TRUE
+Operated,TRUE
+Ordered,TRUE
+Organized,TRUE
+Prepared,TRUE
+Processed,TRUE
+Purchased,TRUE
+Recorded,TRUE
+Retrieved,TRUE
+Screened,TRUE
+Specified,TRUE
+Systematized,TRUE
+Accelerated,TRUE
+Achieved,TRUE
+Attained,TRUE
+Completed,TRUE
+Conceived,TRUE
+Convinced,TRUE
+Discovered,TRUE
+Doubled,TRUE
+Effected,TRUE
+Eliminated,TRUE
+Expanded,TRUE
+Expedited,TRUE
+Founded,TRUE
+Improved,TRUE
+Increased,TRUE
+Initiated,TRUE
+Innovated,TRUE
+Introduced,TRUE
+Invented,TRUE
+Launched,TRUE
+Mastered,TRUE
+Originated,TRUE
+Overcame,TRUE
+Overhauled,TRUE
+Pioneered,TRUE
+Reduced,TRUE
+Resolved,TRUE
+Revitalized,TRUE
+Spearheaded,TRUE
+Strengthened,TRUE
+Transformed,TRUE
+Upgraded,TRUE
+in time,FALSE
+in demand,FALSE
+in of focus,FALSE
+in an uproar,FALSE
+in answer to,FALSE
+in anticipation of,FALSE
+in arrears,FALSE
+in danger,FALSE
+in debt,FALSE
+in decline,FALSE
+in defense of,FALSE
+in detail,FALSE
+in disgrace,FALSE
+in disguise,FALSE
+in fact,FALSE
+in fairness to,FALSE
+in favor of,FALSE
+in fear of,FALSE
+in flames,FALSE
+in flower,FALSE
+in full,FALSE
+in future,FALSE
+in gear,FALSE
+in general,FALSE
+in good condition,FALSE
+in good faith,FALSE
+in hand,FALSE
+in harmony (with),FALSE
+in haste,FALSE
+in hiding,FALSE
+in high spirits,FALSE
+in honor of,FALSE
+in horror,FALSE
+in ink,FALSE
+on watch,FALSE
+on schedule,FALSE
+on the record,FALSE
+on the road,FALSE
+on oath,FALSE
+on pain of,FALSE
+on the air,FALSE
+on balance,FALSE
+on a diet,FALSE
+on a journey,FALSE
+on a trip,FALSE
+on a large scale,FALSE
+on a small scale,FALSE
+on a pension,FALSE
+on a regular basis,FALSE
+on a spree,FALSE
+on account of,FALSE
+on an expedition,FALSE
+on an island,FALSE
+on approval,FALSE
+on average,FALSE
+on bail,FALSE
+on behalf of,FALSE
+on board,FALSE
+on business,FALSE
+on order,FALSE
+on remand,FALSE
+on show,FALSE
+on strike,FALSE
+on suspicion of,FALSE
+on the agenda,FALSE
+on the brink of,FALSE
+on the dot,FALSE
+on the edge of,FALSE
+at high speed,FALSE
+at risk,FALSE
+at one’s side,FALSE
+at a fraction of,FALSE
+at the outset,FALSE
+at the end,FALSE
+at sight,FALSE
+at the double,FALSE
+at one time,FALSE
+at a discount,FALSE
+at a distance,FALSE
+at a glance,FALSE
+at a guess,FALSE
+at a loose and,FALSE
+at a loss,FALSE
+at a low ebb,FALSE
+at a price,FALSE
+at a rate of,FALSE
+at a speed of,FALSE
+at a standstill,FALSE
+at all costs,FALSE
+at all events,FALSE
+at issue,FALSE
+at large,FALSE
+at least,FALSE
+at length,FALSE
+at liberty,FALSE
+at most,FALSE
+at night,FALSE
+at noon,FALSE
+at one’s leisure,FALSE
+at one’s request,FALSE
+at peace,FALSE
+at war,FALSE
+by law,FALSE
+by nature,FALSE
+by far,FALSE
+by design,FALSE
+by chance,FALSE
+by the name of,FALSE
+by luck,FALSE
+by accident,FALSE
+by air,FALSE
+by sea,FALSE
+by land,FALSE
+by all accounts,FALSE
+by all means,FALSE
+by any standard,FALSE
+by appointment,FALSE
+by birth,FALSE
+by check,FALSE
+by coincidence,FALSE
+by courtesy of,FALSE
+by definition,FALSE
+by degrees,FALSE
+by design,FALSE
+by dint of,FALSE
+by far,FALSE
+by force,FALSE
+by hand,FALSE
+by heart,FALSE
+by law,FALSE
+by marriage,FALSE
+by means of,FALSE
+by mistake,FALSE
+by my watch,FALSE
+by nature,FALSE
+by no means,FALSE
+by request,FALSE
+by rights,FALSE
+by sight,FALSE
