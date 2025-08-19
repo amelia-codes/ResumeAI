@@ -119,20 +119,21 @@ from langchain.chat_models import init_chat_model
 
 llm = OllamaLLM(model="llama3.2")
 
-input = input("Enter an experience: ")
-user_prompt = f"Enter an experience: {input}"
+#input = input("Enter an experience: ")
+#input = experience
+#user_prompt = f"Enter an experience: {input}"
 #fix later
 system_message = """
 You are rewriting a resume. Keep it formal, use keywords/action verbs, do not make up stuff.
 
 You should rewrite with the following format:
 
-Keep a similar amount of words to within 3 words. Structure should be bullet points.
+Keep a similar amount of words to within 3 words. Structure should be bullet points. Take the user inputted experience and follow the prompt to give an output. Use what the user has given and use synonyms or change structure but do not add new achievements or assume a certain achievement corresponds to a job unless they are a rewording of the user's achievement inputted.
 
 """
 
 query_prompt_template = ChatPromptTemplate(
-    [("system", system_message), ("user", user_prompt)]
+    [("system", system_message), ("user", "{experience}")]
 )
 
 for message in query_prompt_template.messages:
@@ -187,5 +188,10 @@ graph_builder = StateGraph(State).add_sequence(
 graph_builder.add_edge(START, "write_query")
 graph = graph_builder.compile()
 
+
 chain = query_prompt_template | llm
-print(chain.invoke({"input" : "test"}))
+def new_experience(experience):
+    print(experience)
+    new_paragraph = chain.invoke({"experience" : str(experience)})
+    return new_paragraph
+#print(chain.invoke({"input" : "test"}))
