@@ -1,7 +1,6 @@
 import torch
-from torch.utils.data import Dataset, DataLoader
-#from torchtext import datasets
-#from torchtext.transforms import ToTensor
+from torch.utils.data import Dataset, DataLoader, random_split
+from torchmetrics import R2Score
 import matplotlib.pyplot as plt
 import pandas as pd
 #sentence transform
@@ -9,11 +8,11 @@ from sentence_transformers import SentenceTransformer
 import numpy as np
 
 # HYPERPARAMETERS
-learning_rate = 0.01
+learning_rate = 0.0001 #highest at .0001
 # linear layer size
 size1 = 384  # THIS IS FIXED
-#size2 = 500
-test_train_ratio = 0.9
+size2 = 400
+test_train_ratio = 0.88
 
 
 
@@ -64,12 +63,16 @@ class SentenceTransform:
         return emb
 
 transform = SentenceTransform()
-train_size = int(test_train_ratio * len(dataset))
-training_data = KeywordDataset("Database/target_dataset_2.csv", transform=transform, indices=range(train_size))
-test_data = KeywordDataset("Database/target_dataset_2.csv", transform=transform, indices=range(train_size, len(dataset)))
+data = KeywordDataset("Database/target_dataset_2.csv",transform=transform)
+train_size = int(test_train_ratio * len(data))
+test_size = len(data) - train_size
+#transform = SentenceTransform()
 
+#test_data = KeywordDataset("Database/target_dataset_2.csv", transform=transform, indices=range(train_size, len(dataset)))
+training_data, test_data = random_split(data, [train_size,test_size])
 #change later
-batch_size = 64
+#batch_size = 64
+batch_size = 1
 
 train_dataloader = DataLoader(training_data, batch_size=batch_size,shuffle=True)
 test_dataloader = DataLoader(test_data, batch_size=batch_size,shuffle=True)
@@ -88,6 +91,11 @@ class NeuralNetwork(torch.nn.Module):
             torch.nn.ReLU(), 
             torch.nn.Linear(size2, size2),
             torch.nn.ReLU(),
+            torch.nn.Linear(size2,size2),
+            torch.nn.ReLU(),
+            torch.nn.Linear(size2,size2),
+            torch.nn.ReLU(),
+    
             torch.nn.Linear(size2, 1)
         )
 
@@ -97,12 +105,12 @@ class NeuralNetwork(torch.nn.Module):
         return logits
 
 device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
-#model = NeuralNetwork()
-#model.to(device)
+model = NeuralNetwork()
+model.to(device)
 
 #loss function
 loss_fn = torch.nn.BCEWithLogitsLoss()
-#optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate)
+optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate)
 #computing the gradient
 
 
@@ -143,21 +151,21 @@ def test_loop(dataloader, model, loss_fn):
             pred = model(X)
             test_loss += loss_fn(pred, y).item()
             correct += ((torch.sigmoid(pred) >= 0.5).float() == y).type(torch.float).sum().item()
-
     test_loss /= num_batches
     correct /= size
     print(f"Test Error: \n Accuracy: {(100*correct):>0.1f}%, Avg loss: {test_loss:>8f} \n")
-    return correct
+    #return correct
 
 
 
 epochs = 10
-#for t in range(epochs):
-#    print(f"Epoch {t+1}\n-------------------------------")
-#    train_loop(train_dataloader, model, loss_fn, optimizer)
-#print("Complete.")
-xpoints=[]
-ypoints=[]
+for t in range(epochs):
+    print(f"Epoch {t+1}\n-------------------------------")
+    train_loop(train_dataloader, model, loss_fn, optimizer)
+    test_loop(test_dataloader, model, loss_fn)
+print("Complete.")
+#xpoints=[]
+#ypoints=[]
 
 """
 for i in np.arange(.001,.01,.001):
@@ -172,6 +180,7 @@ for i in np.arange(.001,.01,.001):
     ypoints.append(correct*100)
 """
 
+"""
 for i in range(100,1000,100):
     size2=i
     model = NeuralNetwork()
@@ -190,4 +199,4 @@ plt.xlabel("size2")
 plt.ylabel("accuracy")
 plt.title("size2 vs accuracy")
 plt.show()
-
+"""

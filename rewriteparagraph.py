@@ -11,6 +11,16 @@ import sqlite3
 from bs4 import BeautifulSoup
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 import spacy
+from langchain_ollama.llms import OllamaLLM
+from langchain_core.messages import SystemMessage
+from langchain.chains import LLMChain
+
+
+#todo
+#expects the ranked experiences as input rewrite each using keywords
+#input ranked experiences and keywords
+
+
 #for now ignore
 #if not os.environ.get("LANGSMITH_API_KEY"):
 #    os.environ["LANGSMITH_API_KEY"] = getpass.getpass()
@@ -51,12 +61,13 @@ Working Experience with ASTs and Fixed Equipment.
 #html split into sections
 nlp = spacy.load("en_core_web_trf")
 tokens = nlp(test_phrase_national_lab)
+"""
 for section_text in sections:
     tokens = nlp(section_text)
     weight = 0 #change later not sure how to classify this
     phrases = list(tokens.noun_chunks)
     #append keywords list with new phrases (note currently keywords is a list of phrases but it should change to be a tuple including weights)
-
+"""
 phrases = list(tokens.noun_chunks)
 print(phrases)
 
@@ -104,14 +115,21 @@ class State(TypedDict):
     result: str
     answer: str
 
-if not os.environ.get("OPENAI_API_KEY"):
-  os.environ["OPENAI_API_KEY"] = getpass.getpass("Enter API key for OpenAI: ")
-
 from langchain.chat_models import init_chat_model
 
-llm = init_chat_model("gpt-4o-mini", model_provider="openai")
+llm = OllamaLLM(model="llama3.2")
 
-user_prompt = "Enter x from y section: {input}"
+input = input("Enter an experience: ")
+user_prompt = f"Enter an experience: {input}"
+#fix later
+system_message = """
+You are rewriting a resume. Keep it formal, use keywords/action verbs, do not make up stuff.
+
+You should rewrite with the following format:
+
+Keep a similar amount of words to within 3 words. Structure should be bullet points.
+
+"""
 
 query_prompt_template = ChatPromptTemplate(
     [("system", system_message), ("user", user_prompt)]
@@ -132,7 +150,7 @@ def write_query(state: State):
             "dialect": db.dialect,
             "top_k": 10,
             "table_info": db.get_table_info(),
-            "input": state["input"],
+            "input": state["question"],
         }
     )
     structured_llm = llm.with_structured_output(QueryOutput)
@@ -157,8 +175,8 @@ def generate_answer(state: State):
         "associated with the user's occupation \n\n"
         f"Question: {state['question']}\n"
         f"SQL Query: {state['query']}\n"
-        f"SQL Result: {state['result']}"
-    )
+        f"SQL Result: {state['result']}")
+    
     response = llm.invoke(prompt)
     return {"answer": response.content}
 
@@ -168,3 +186,6 @@ graph_builder = StateGraph(State).add_sequence(
 )
 graph_builder.add_edge(START, "write_query")
 graph = graph_builder.compile()
+
+chain = query_prompt_template | llm
+print(chain.invoke({"input" : "test"}))
