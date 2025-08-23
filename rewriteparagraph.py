@@ -88,8 +88,9 @@ template = ("Given the input which contains chuncks of text parsed from an"
            "in a list titled 'job_specific_keywords'")
 
 
-
-occupation = "Financial Managers"
+#sub query with keyword list from new database not old one
+#occupation = "Financial Managers"
+occupation = "{occupation}"
 for table in ('skills','knowledge','abilities','work_activities'):
     query = f"""
     SELECT 
@@ -190,8 +191,10 @@ graph = graph_builder.compile()
 
 
 chain = query_prompt_template | llm
-def new_experience(experience):
+def new_experience(experience,occupation):
     print(experience)
     new_paragraph = chain.invoke({"experience" : str(experience)})
     return new_paragraph
 #print(chain.invoke({"input" : "test"}))
+
+#need to invoke occupatin?

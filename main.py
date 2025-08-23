@@ -2,6 +2,7 @@ from job_description_handling import job_description_phrase_scraper
 from resume_handling import resume_phrase_scraper
 from resume_handling import resume_ranker
 from rewriteparagraph import new_experience
+from nsquare import exportkeywords
 
 """
 format_type = input("Select format type: [plain text/HTML]: ")
@@ -32,10 +33,11 @@ sorted_experiences = [experience for _, experience in sorted(zip(resume_ranks, r
 for i,experience in enumerate(sorted_experiences):
     print(1+i, ". ", experience, sep="")
 """
+occupation = input("List job title here: ")
 new_experiences = []
 for i in resume_experiences:
     print(i)
-    new_resume_experience = new_experience(i)
+    new_resume_experience = new_experience(i,occupation)
     new_experiences.append(new_resume_experience)
 
 print(new_experiences)
