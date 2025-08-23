@@ -13,6 +13,7 @@ elif format_type == "plain text":
     phrases = job_description_phrase_scraper(plain_text)
 """
 resume_experiences = []
+
 continue_input = True
 while continue_input:
     resume_experience_input = input("Enter resume experiences or END to stop: ")
@@ -23,6 +24,12 @@ while continue_input:
         resume_experiences.append(resume_experience_input)
 #while resume_experience_input != "END": the while here stopped one experience from getting recorded
 #    resume_experiences.append(resume_experience_input)
+
+=======
+resume_experience_input = input("Enter resume experiences or END to stop:")
+while resume_experience_input != "END":
+    resume_experiences.append(resume_experience_input)
+    resume_experience_input = input("Enter resume experiences or END to stop:")
 
 
 
