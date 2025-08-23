@@ -63,7 +63,7 @@ class SentenceTransform:
         return emb
 
 transform = SentenceTransform()
-data = KeywordDataset("Database/target_dataset_2.csv",transform=transform)
+data = KeywordDataset("Database/combined_targets.csv",transform=transform)
 train_size = int(test_train_ratio * len(data))
 test_size = len(data) - train_size
 #transform = SentenceTransform()
