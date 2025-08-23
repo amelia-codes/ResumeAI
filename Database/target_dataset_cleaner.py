@@ -21,4 +21,4 @@ import pandas as pd
 # print(target_insights)
 # target_insights.rename(columns={"max": "target"})["target"].to_csv("Database/target_dataset_2.csv")
 df = pd.concat([pd.read_csv("Database/target_dataset_2.csv"),pd.read_csv("Database/target_addition_false.csv", encoding_errors="replace").rename(columns={"word":"Phrase", "false/true":"target"})], axis=0, ignore_index=True)
-df.to_csv("Database/combined_targets.csv")
+df.to_csv("Database/combined_targets.csv", index=False)

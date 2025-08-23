@@ -1,5 +1,5 @@
 word,false/true
-Administered,
+Administered,TRUE
 Analyzed,TRUE
 Assigned,TRUE
 Chaired,TRUE
@@ -289,7 +289,7 @@ on the dot,FALSE
 on the edge of,FALSE
 at high speed,FALSE
 at risk,FALSE
-at oneÕs side,FALSE
+at oneï¿½s side,FALSE
 at a fraction of,FALSE
 at the outset,FALSE
 at the end,FALSE
