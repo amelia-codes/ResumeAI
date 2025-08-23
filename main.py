@@ -13,6 +13,7 @@ resume_experiences = []
 resume_experience_input = input("Enter resume experiences or END to stop:")
 while resume_experience_input != "END":
     resume_experiences.append(resume_experience_input)
+    resume_experience_input = input("Enter resume experiences or END to stop:")
 
 resume_phrases = [resume_phrase_scraper(resume_experience) for resume_experience in resume_experiences]
 resume_ranks = [resume_ranker(resume_phrase) for resume_phrase in resume_phrases]

@@ -1,0 +1,971 @@
+,Phrase,target
+0,The ability,False
+1,Knowledge,False
+2,information,True
+3,others,False
+4,equipment,True
+5,principles,True
+6,This,False
+7,people,True
+8,methods,True
+9,materials,True
+10,ideas,False
+11,that,False
+12,time,True
+13,objects,False
+14,procedures,True
+15,machines,True
+16,processes,True
+17,problems,False
+18,performance,True
+19,legs,False
+20,systems,True
+21,actions,False
+22,services,True
+23,data,True
+24,rules,False
+25,differences,True
+26,the environment,True
+27,events,False
+28,you,False
+29,they,False
+30,things,False
+31,techniques,True
+32,it,False
+33,writing,True
+34,relation,False
+35,products,True
+36,arms,False
+37,-,False
+38,benefits,True
+39,It,False
+40,changes,True
+41,something,False
+42,laws,True
+43,guidance,True
+44,devices,True
+45,customers,True
+46,software,True
+47,resources,True
+48,a problem,False
+49,your arm,False
+50,tools,True
+51,which,False
+52,words,False
+53,what,False
+54,your hand,False
+55,maintenance,True
+56,mail,False
+57,their minds,False
+58,vehicles,True
+59,the work,False
+60,the whole body,False
+61,treatment,True
+62,interactions,False
+63,uses,True
+64,indicators,True
+65,them,False
+66,sounds,False
+67,hands,False
+68,money,True
+69,goods,True
+70,general rules,False
+71,functions,True
+72,foot,False
+73,drawings,True
+74,distribution,True
+75,direction,True
+76,your arms,False
+77,details,False
+78,your body,False
+79,grammar,True
+80,motion,False
+81,sound,False
+82,production,True
+83,specifications,True
+84,spelling,True
+85,similarities,True
+86,structures,True
+87,sense,False
+88,subordinates,True
+89,costs,True
+90,repair,True
+91,technology,True
+92,telephone,True
+93,quality,True
+94,programs,True
+95,the basis,False
+96,the fingers,False
+97,muscle force,True
+98,the hand,False
+99,the meaning,False
+100,the movement,False
+101,the organization,False
+102,pictures,False
+103,person,False
+104,the presence,False
+105,the public,False
+106,the relative costs,True
+107,the speed,True
+108,operations,True
+109,the structure,False
+110,numbers,False
+111,cultures,False
+112,yourself,False
+113,an object,False
+114,a machine,True
+115,activities,False
+116,conclusions,True
+117,applications,True
+118,content,False
+119,composition,False
+120,computers,True
+121,court procedures,True
+122,all relevant sources,False
+123,strategies,True
+124,structure,False
+125,algebra,True
+126,stores,True
+127,substances,True
+128,supervisors,True
+129,switching,False
+130,strategic planning,True
+131,statistics,True
+132,storage / handling techniques,True
+133,stenography,True
+134,system performance,True
+135,state,False
+136,standards,True
+137,sprinting,False
+138,spoken words,False
+139,alternative solutions,False
+140,speech,False
+141,alternative ways,False
+142,specific problems,True
+143,specific goals,False
+144,sources,False
+145,symptoms,True
+146,tactics,False
+147,aircraft,True
+148,the arms,False
+149,the democratic political process,True
+150,the correct response,True
+151,the controls,True
+152,the construction,True
+153,the chemical processes,True
+154,the chemical composition,True
+155,the cause,False
+156,the body,False
+157,the best solution,True
+158,the best people,True
+159,ability,False
+160,the audience,False
+161,the assessment,True
+162,the appropriate use,False
+163,an organization,True
+164,the analysis,True
+165,the activities,False
+166,the actions,False
+167,the English language,True
+168,tests,True
+169,administrative and office procedures,True
+170,telecommunications systems,True
+171,agency rules,True
+172,"air, rail, sea, road",True
+173,"technical , systems- , or process - related topics",True
+174,team members,False
+175,teaching,True
+176,tasks,False
+177,"sound , light , picture",True
+178,solutions,True
+179,an unstable position,True
+180,reasons,False
+181,resource allocation,True
+182,resistance,False
+183,reporting,True
+184,arithmetic,True
+185,religions,False
+186,relevant information,True
+187,relevant equipment,False
+188,relationships,True
+189,arm,False
+190,related information,True
+191,rehabilitation,True
+192,regulations,True
+193,records,True
+194,reasoning,True
+195,the developmental needs,True
+196,raw materials,True
+197,rail,False
+198,questions,False
+199,quantities,True
+200,quality standards,True
+201,quality control,True
+202,artistic contributions,True
+203,psychological research methods,True
+204,property,True
+205,properties,True
+206,pronunciation,False
+207,banking,True
+208,programming,True
+209,approaches,True
+210,respect,False
+211,response,False
+212,restaurants,True
+213,animal,True
+214,societal trends,True
+215,skills,False
+216,sizes,True
+217,situation,False
+218,another person,False
+219,short bursts,False
+220,shades,False
+221,several objects,False
+222,sets,False
+223,set,False
+224,answers,False
+225,separate parts,True
+226,sentences,False
+227,anticipation,True
+228,selection,False
+229,seemingly unrelated events,True
+230,sea,False
+231,sculpture,False
+232,scientific rules,True
+233,scene,False
+234,sales techniques,True
+235,sales control systems,True
+236,routine maintenance,True
+237,roads,False
+238,road,False
+239,results,True
+240,the design,True
+241,the distance,False
+242,the differences,False
+243,weaknesses,False
+244,watercraft,True
+245,visual arts,False
+246,very small objects,False
+247,a given topic,False
+248,various purposes,False
+249,various goods,True
+250,values,True
+251,a glare,False
+252,user needs,True
+253,unusual or clever ideas,True
+254,two or more movements,True
+255,two or more limbs,False
+256,two or more different signals,True
+257,two or more activities,True
+258,two legs,False
+259,treatment alternatives,True
+260,a group,False
+261,transmission,False
+262,transformations,False
+263,transcription,True
+264,training effects,True
+265,training / instructional methods,True
+266,training,True
+267,touch,False
+268,torso,False
+269,a job,False
+270,a known pattern,True
+271,ways,False
+272,a foreign ( non - English ) language,True
+273,the direction,False
+274,what kind,False
+275,your work,False
+276,your whole body,False
+277,your movements,False
+278,your location,False
+279,your job,False
+280,The things,False
+281,your body balance,True
+282,This ability,False
+283,This information,True
+284,a certain order,False
+285,your abdominal and lower back muscles,True
+286,a design,True
+287,written sentences,False
+288,written or electronic / magnetic form,True
+289,written form,False
+290,"written , oral , and visual media",True
+291,a distance,True
+292,wrists,False
+293,works,False
+294,workplace terminology,True
+295,workers,False
+296,work - related documents,False
+297,a few feet,True
+298,word processing,True
+299,word,False
+300,wiring,True
+301,a figure,True
+302,thinking,False
+303,a moving object,True
+304,these expenditures,True
+305,a number,False
+306,the protection,False
+307,the problem,False
+308,a sound,False
+309,the practical application,True
+310,the points,False
+311,a specific rule,False
+312,the observer,False
+313,the number,False
+314,the needs,False
+315,the needed tools,False
+316,a system,True
+317,the measurement,True
+318,a task,False
+319,the kind,False
+320,the job,False
+321,the information,False
+322,the implications,False
+323,a topic,False
+324,the goals,True
+325,a vehicle,True
+326,the financial markets,True
+327,the features,False
+328,the eyes,False
+329,a work activity,False
+330,the effective manufacture,True
+331,the educational needs,False
+332,production techniques,True
+333,a single source,True
+334,a signal,False
+335,the right mathematical methods,True
+336,a presented object,True
+337,their tissues,True
+338,their physical characteristics,False
+339,a period,False
+340,their knowledge,False
+341,their interrelationships,False
+342,their interactions,False
+343,their impact,False
+344,their history,True
+345,their designs,True
+346,their causes,False
+347,their applications,True
+348,a piece,False
+349,the value,False
+350,the same time,False
+351,the underlying principles,True
+352,the tools,False
+353,the time,False
+354,the theory,True
+355,the system,True
+356,a relationship,False
+357,the strengths,False
+358,the strategies,True
+359,the spending,True
+360,a remembered object,True
+361,the speech,False
+362,the situation,False
+363,behavior,False
+364,production methods,True
+365,production processes,True
+366,human behavior,True
+367,historical events,True
+368,highways,True
+369,hardware,True
+370,complex problems,True
+371,hand,False
+372,guests,True
+373,groups,False
+374,group behavior,True
+375,grievances,True
+376,computer hardware,True
+377,government regulations,True
+378,government,True
+379,computer programs,True
+380,geometry,True
+381,computer systems,True
+382,general physical activities,False
+383,gauges,True
+384,full attention,False
+385,formulas,True
+386,forms,True
+387,formal educational or training programs,True
+388,forklifts,True
+389,food products,True
+390,"fluid , material , and atmospheric dynamics",True
+391,finger,False
+392,financial data,True
+393,files,True
+394,houses,True
+395,human culture,False
+396,facts,False
+397,human injuries,True
+398,leadership technique,True
+399,co,False
+400,"land , sea , and air masses",True
+401,labor relations,True
+402,jumping,False
+403,its parts,False
+404,color,False
+405,interrelationships,True
+406,interests,False
+407,interdependencies,True
+408,colors,False
+409,instruction,True
+410,institutions,False
+411,inspections,True
+412,information files,True
+413,communication,True
+414,influences,False
+415,individuals,False
+416,individual judgment,True
+417,individual differences,False
+418,compensation,True
+419,inappropriate times,False
+420,improvements,True
+421,importance,False
+422,complaints,True
+423,human resources modeling,True
+424,human migrations,True
+425,"fast , simple , repeated movements",True
+426,facilities,True
+427,coworkers,True
+428,disposal methods,True
+429,consumption,False
+430,direct physical activity,True
+431,different ways,False
+432,different sets,False
+433,different philosophical systems,False
+434,dials,True
+435,diagnosis,True
+436,control,False
+437,cooperation,True
+438,detailed instructions,True
+439,design techniques,True
+440,deformities,True
+441,defects,True
+442,decision - making,True
+443,day,False
+444,date,False
+445,coordination,True
+446,danger signs,True
+447,dance,False
+448,corrective action,True
+449,customer satisfaction,True
+450,customer needs assessment,True
+451,customer and personal services,True
+452,curriculum and training design,True
+453,correctness,False
+454,creativity,True
+455,creative ways,True
+456,diseases,True
+457,disputes,True
+458,expert advice,True
+459,dissemination techniques,True
+460,executive orders,True
+461,example,False
+462,exact positions,True
+463,conditions,True
+464,evaluation,True
+465,ethnicity,False
+466,ethics,False
+467,errors,False
+468,conflicts,True
+469,engineering science,True
+470,employees,False
+471,emotional support,True
+472,electronic equipment,True
+473,electrical or electronic ( not mechanical ) principles,True
+474,either control mechanisms,True
+475,effects,False
+476,economic and accounting principles,True
+477,"e.g. , patterns",False
+478,e-mail,True
+479,e,False
+480,dynamics,False
+481,drug properties,True
+482,considerable use,True
+483,drama,False
+484,documentation,True
+485,constructive and cooperative working relationships,True
+486,distances,True
+487,learning,False
+488,legal codes,True
+489,close range,True
+490,performance standards,True
+491,buildings,True
+492,patterns,False
+493,pattern,False
+494,patients,True
+495,passenger vehicles,True
+496,parts,False
+497,part,False
+498,paragraphs,False
+499,paperwork,True
+500,outcomes,True
+501,others ' reactions,True
+502,others ' actions,False
+503,business and management principles,True
+504,other techniques,False
+505,other structures,False
+506,other sources,False
+507,other problems,False
+508,other personal care,True
+509,other people,False
+510,other objects,False
+511,other individuals,True
+512,other indicators,True
+513,other groups,False
+514,other external sources,True
+515,other distracting sounds,True
+516,calculus,True
+517,other body part,False
+518,broadcasting,False
+519,brightness,False
+520,letters,False
+521,personal assistance,True
+522,behavioral and affective disorders,True
+523,product requirements,True
+524,product demonstration,True
+525,processors,True
+526,blueprints,True
+527,both current and future problem - solving,True
+528,both plant,False
+529,breath,False
+530,preventive health - care measures,True
+531,prediction,True
+532,precision technical plans,True
+533,precisely coordinated movements,True
+534,precedents,True
+535,practices,False
+536,potential actions,True
+537,policies,True
+538,plant and animal organisms,True
+539,"plant , animal , and human life",True
+540,plans,False
+541,pitch,True
+542,pieces,False
+543,bright lighting,False
+544,physical principles,True
+545,physical and mental dysfunctions,True
+546,personnel recruitment,True
+547,personnel information systems,True
+548,personality,False
+549,origins,False
+550,organizations,True
+551,options,True
+552,career counseling,True
+553,models,True
+554,circuit boards,True
+555,merchandise / goods,True
+556,members,False
+557,medical attention,True
+558,media production,True
+559,mechanized equipment,True
+560,"mechanical , electrical , atomic and sub - atomic structures",True
+561,mechanical ( not electronic ) principles,True
+562,measures,True
+563,meaningful patterns,True
+564,maximum muscle force,True
+565,mathematics,True
+566,mathematical operations,True
+567,circumstances,False
+568,marketing strategy,True
+569,management,True
+570,civilizations,False
+571,classes,False
+572,clients,True
+573,low - light conditions,True
+574,loudness,True
+575,long periods,False
+576,long - range objectives,True
+577,logic,True
+578,locations,False
+579,"lights , sounds , pictures",True
+580,chips,True
+581,chemicals,True
+582,motivation,True
+583,cells,True
+584,operation,False
+585,operating errors,True
+586,oneself,False
+587,one position,False
+588,one or both hands,False
+589,one leg,False
+590,one arm,False
+591,one 's side,False
+592,one 's own time,True
+593,causes,False
+594,object,True
+595,"numbers , letters , words , pictures",True
+596,new things,False
+597,movement,False
+598,new knowledge,True
+599,new information,True
+600,new applications,True
+601,negotiation,True
+602,needs,True
+603,national security operations,True
+604,mutual trust,True
+605,music,False
+606,muscular endurance,True
+607,certain work,False
+608,muscle fatigue,True
+609,moving parts,False
+610,other distracting material,False
+611,Administered,
+612,Analyzed,True
+613,Assigned,True
+614,Chaired,True
+615,Consolidated,True
+616,Contracted,True
+617,Coordinated,True
+618,Delegated,True
+619,Developed,True
+620,Directed,True
+621,Evaluated,True
+622,Executed,True
+623,Organized,True
+624,Oversaw,True
+625,Planned,True
+626,Prioritized,True
+627,Produced,True
+628,Recommended,True
+629,Reorganized,True
+630,Reviewed,True
+631,Scheduled,True
+632,Supervised,True
+633,Administered,True
+634,Allocated,True
+635,Analyzed,True
+636,Appraised,True
+637,Audited,True
+638,Balanced,True
+639,Budgeted,True
+640,Calculated,True
+641,Computed,True
+642,Developed,True
+643,Managed,True
+644,Planned,True
+645,Projected,True
+646,Researched,True
+647,Addressed,True
+648,Arbitrated,True
+649,Arranged,True
+650,Authored,True
+651,Co-authored,True
+652,Collaborated,True
+653,Corresponded,True
+654,Developed,True
+655,Directed,True
+656,Drafted,True
+657,Enlisted,True
+658,Formulated,True
+659,Influenced,True
+660,Interpreted,True
+661,Lectured,True
+662,Mediated,True
+663,Moderated,True
+664,Negotiated,True
+665,Persuaded,True
+666,Promoted,True
+667,Proposed,True
+668,Publicized,True
+669,Reconciled,True
+670,Recruited,True
+671,Spoke,True
+672,Translated,True
+673,Wrote,True
+674,Clarified,True
+675,Collected,True
+676,Critiqued,True
+677,Diagnosed,True
+678,Evaluated,True
+679,Examined,True
+680,Extracted,True
+681,Identified,True
+682,Inspected,True
+683,Inspired,True
+684,Interpreted,True
+685,Interviewed,True
+686,Investigated,True
+687,Organized,True
+688,Reviewed,True
+689,Summarized,True
+690,Surveyed,True
+691,Systematized,True
+692,Assembled,True
+693,Built,True
+694,Calculated,True
+695,Computed,True
+696,Designed,True
+697,Devised,True
+698,Engineered,True
+699,Fabricated,True
+700,Maintained,True
+701,Operated,True
+702,Pinpointed,True
+703,Programmed,True
+704,Remodeled,True
+705,Repaired,True
+706,Solved,True
+707,Adapted,True
+708,Advised,True
+709,Clarified,True
+710,Coached,True
+711,Communicated,True
+712,Conducted,True
+713,Coordinated,True
+714,Developed,True
+715,Enabled,True
+716,Encouraged,True
+717,Evaluated,True
+718,Explained,True
+719,Facilitated,True
+720,Guided,True
+721,Informed,True
+722,Instructed,True
+723,Lectured,True
+724,Persuaded,True
+725,Set goals,True
+726,Stimulated,True
+727,Taught,True
+728,Trained,True
+729,Acted,True
+730,Conceptualized,True
+731,Created,True
+732,Customized,True
+733,Designed,True
+734,Developed,True
+735,Directed,True
+736,Established,True
+737,Fashioned,True
+738,Illustrated,True
+739,Instituted,True
+740,Integrated,True
+741,Performed,True
+742,Planned,True
+743,Proved,True
+744,Revised,True
+745,Revitalized,True
+746,Set up,True
+747,Shaped,True
+748,Streamlined,True
+749,Structured,True
+750,Tabulated,True
+751,Validated,True
+752,Assessed,True
+753,Assisted,True
+754,Clarified,True
+755,Coached,True
+756,Counseled,True
+757,Demonstrated,True
+758,Diagnosed,True
+759,Educated,True
+760,Facilitated,True
+761,Familiarized,True
+762,Guided,True
+763,Inspired,True
+764,Motivated,True
+765,Participated,True
+766,Provided,True
+767,Referred,True
+768,Rehabilitated,True
+769,Reinforced,True
+770,Represented,True
+771,Supported,True
+772,Taught,True
+773,Trained,True
+774,Verified,True
+775,Approved,True
+776,Arranged,True
+777,Catalogued,True
+778,Classified,True
+779,Collected,True
+780,Compiled,True
+781,Dispatched,True
+782,Executed,True
+783,Filed,True
+784,Generated,True
+785,Implemented,True
+786,Inspected,True
+787,Monitored,True
+788,Operated,True
+789,Ordered,True
+790,Organized,True
+791,Prepared,True
+792,Processed,True
+793,Purchased,True
+794,Recorded,True
+795,Retrieved,True
+796,Screened,True
+797,Specified,True
+798,Systematized,True
+799,Accelerated,True
+800,Achieved,True
+801,Attained,True
+802,Completed,True
+803,Conceived,True
+804,Convinced,True
+805,Discovered,True
+806,Doubled,True
+807,Effected,True
+808,Eliminated,True
+809,Expanded,True
+810,Expedited,True
+811,Founded,True
+812,Improved,True
+813,Increased,True
+814,Initiated,True
+815,Innovated,True
+816,Introduced,True
+817,Invented,True
+818,Launched,True
+819,Mastered,True
+820,Originated,True
+821,Overcame,True
+822,Overhauled,True
+823,Pioneered,True
+824,Reduced,True
+825,Resolved,True
+826,Revitalized,True
+827,Spearheaded,True
+828,Strengthened,True
+829,Transformed,True
+830,Upgraded,True
+831,in time,False
+832,in demand,False
+833,in of focus,False
+834,in an uproar,False
+835,in answer to,False
+836,in anticipation of,False
+837,in arrears,False
+838,in danger,False
+839,in debt,False
+840,in decline,False
+841,in defense of,False
+842,in detail,False
+843,in disgrace,False
+844,in disguise,False
+845,in fact,False
+846,in fairness to,False
+847,in favor of,False
+848,in fear of,False
+849,in flames,False
+850,in flower,False
+851,in full,False
+852,in future,False
+853,in gear,False
+854,in general,False
+855,in good condition,False
+856,in good faith,False
+857,in hand,False
+858,in harmony (with),False
+859,in haste,False
+860,in hiding,False
+861,in high spirits,False
+862,in honor of,False
+863,in horror,False
+864,in ink,False
+865,on watch,False
+866,on schedule,False
+867,on the record,False
+868,on the road,False
+869,on oath,False
+870,on pain of,False
+871,on the air,False
+872,on balance,False
+873,on a diet,False
+874,on a journey,False
+875,on a trip,False
+876,on a large scale,False
+877,on a small scale,False
+878,on a pension,False
+879,on a regular basis,False
+880,on a spree,False
+881,on account of,False
+882,on an expedition,False
+883,on an island,False
+884,on approval,False
+885,on average,False
+886,on bail,False
+887,on behalf of,False
+888,on board,False
+889,on business,False
+890,on order,False
+891,on remand,False
+892,on show,False
+893,on strike,False
+894,on suspicion of,False
+895,on the agenda,False
+896,on the brink of,False
+897,on the dot,False
+898,on the edge of,False
+899,at high speed,False
+900,at risk,False
+901,at one�s side,False
+902,at a fraction of,False
+903,at the outset,False
+904,at the end,False
+905,at sight,False
+906,at the double,False
+907,at one time,False
+908,at a discount,False
+909,at a distance,False
+910,at a glance,False
+911,at a guess,False
+912,at a loose and,False
+913,at a loss,False
+914,at a low ebb,False
+915,at a price,False
+916,at a rate of,False
+917,at a speed of,False
+918,at a standstill,False
+919,at all costs,False
+920,at all events,False
+921,at issue,False
+922,at large,False
+923,at least,False
+924,at length,False
+925,at liberty,False
+926,at most,False
+927,at night,False
+928,at noon,False
+929,at one's leisure,False
+930,at one's request,False
+931,at peace,False
+932,at war,False
+933,by law,False
+934,by nature,False
+935,by far,False
+936,by design,False
+937,by chance,False
+938,by the name of,False
+939,by luck,False
+940,by accident,False
+941,by air,False
+942,by sea,False
+943,by land,False
+944,by all accounts,False
+945,by all means,False
+946,by any standard,False
+947,by appointment,False
+948,by birth,False
+949,by check,False
+950,by coincidence,False
+951,by courtesy of,False
+952,by definition,False
+953,by degrees,False
+954,by design,False
+955,by dint of,False
+956,by far,False
+957,by force,False
+958,by hand,False
+959,by heart,False
+960,by law,False
+961,by marriage,False
+962,by means of,False
+963,by mistake,False
+964,by my watch,False
+965,by nature,False
+966,by no means,False
+967,by request,False
+968,by rights,False
+969,by sight,False

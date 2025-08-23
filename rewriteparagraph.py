@@ -123,7 +123,7 @@ input = input("Enter an experience: ")
 user_prompt = f"Enter an experience: {input}"
 #fix later
 system_message = """
-You are rewriting a resume. Keep it formal, use keywords/action verbs, do not make up stuff.
+You are rewriting a resume. Keep it formal, use keywords/action verbs, only use the actions tasks the user stated they did.
 
 You should rewrite with the following format:
 
