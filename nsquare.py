@@ -11,8 +11,9 @@ import numpy as np
 learning_rate = 0.0001 #highest at .0001
 # linear layer size
 size1 = 384  # THIS IS FIXED
-size2 = 400
-test_train_ratio = 0.88
+#size2 = 400
+size2=400
+test_train_ratio = 0.83
 
 
 
@@ -71,8 +72,8 @@ test_size = len(data) - train_size
 #test_data = KeywordDataset("Database/target_dataset_2.csv", transform=transform, indices=range(train_size, len(dataset)))
 training_data, test_data = random_split(data, [train_size,test_size])
 #change later
-#batch_size = 64
 batch_size = 1
+#batch_size = 1
 
 train_dataloader = DataLoader(training_data, batch_size=batch_size,shuffle=True)
 test_dataloader = DataLoader(test_data, batch_size=batch_size,shuffle=True)
@@ -90,10 +91,10 @@ class NeuralNetwork(torch.nn.Module):
             torch.nn.Linear(size1, size2),
             torch.nn.ReLU(), 
             torch.nn.Linear(size2, size2),
-            torch.nn.ReLU(),
-            torch.nn.Linear(size2,size2),
-            torch.nn.ReLU(),
-            torch.nn.Linear(size2,size2),
+            #torch.nn.ReLU(),
+            #torch.nn.Linear(size2,size2),
+            #torch.nn.ReLU(),
+            #torch.nn.Linear(size2,size2),
             torch.nn.ReLU(),
     
             torch.nn.Linear(size2, 1)
